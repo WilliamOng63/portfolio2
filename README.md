@@ -22,5 +22,5 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 
 ## How to Run the Project
 1. **Clone the repository:**
-   
-   git clone [https://github.com/WilliamOng63/portfolio.git](https://github.com/WilliamOng63/portfolio.git)
+   ```bash
+   git clone [https://github.com/WilliamOng63/portfolio.git](https://github.com/WilliamOng63/portfolio.git) 
