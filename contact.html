@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - William's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extra styles just for the contact form */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="logo99.png" alt="William's Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" style="color: var(--accent);">Contact</a>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="portfolio-section">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p style="margin-bottom: 1.5rem; margin-top: 1rem;">Whether you want to discuss full-stack development, collaborate on an IoT project, or just play a round of Chinese Chess, feel free to reach out!</p>
+                    
+                    <p><strong>📍 Location:</strong> Universiti Sultan Zainal Abidin (UniSZA), Terengganu</p>
+                    <p style="margin-top: 0.5rem;"><strong>📧 Email:</strong> williamongxuanwei@gmail.com</p>
+                    <p style="margin-top: 0.5rem;"><strong>💻 GitHub:</strong> github.com/WilliamOng63</p>
+                </div>
+
+                <div class="contact-form project-card">
+                    <form onsubmit="event.preventDefault(); alert('Thanks for reaching out! (This is a mock form for CSD 34203)');">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required placeholder="How can we work together?"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 William Ong Xuan Wei. Built for CSD 34203.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>

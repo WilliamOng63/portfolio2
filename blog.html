@@ -3,35 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - My Personal Blog</title>
+    <title>Blog - William's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>My Blog</h1>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About</a> | 
-            <a href="blog.html">Blog</a> | 
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="logo99.png" alt="William's Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html" style="color: var(--accent);">Blog</a>
             <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </nav>
 
     <main>
-        <h2>Latest Posts</h2>
-        
-        <article>
-            <h3>Post 1: Getting Started with GitHub</h3>
-            <p>Date: May 24, 2026</p>
-            <p>Today I set up my personal blog project for my software development class. Working out the command line version control has been a great experience!</p>
-        </article>
+        <section class="portfolio-section">
+            <h2>Latest Thoughts & Updates</h2>
+            <div class="project-grid">
+                
+                <article class="project-card">
+                    <p class="tag">May 24, 2026 • Full-Stack Development</p>
+                    <h3>Building FacilEase for My Workshop</h3>
+                    <p>Wrapping up the FacilEase system has been a great learning curve. Moving away from standard inventory systems and focusing purely on facility booking requirements challenged me to refine my database models. Combining a PHP CodeIgniter 4 backend with a React frontend really smoothed out the session filtering and login functions.</p>
+                </article>
 
-        <article>
-            <h3>Post 2: Exploring Web Technologies</h3>
-            <p>Date: May 20, 2026</p>
-            <p>I am diving deeper into web development. Building out a clean, functional portfolio is a great way to showcase my skills to the world.</p>
-        </article>
+                <article class="project-card">
+                    <p class="tag">May 20, 2026 • Machine Learning</p>
+                    <h3>Training the NLP Spam Detector for My FYP</h3>
+                    <p>Integrating the Python microservice for my Final Year Project has been incredibly rewarding. Tuning the Naive Bayes and TF-IDF algorithms to accurately flag spam in the Intelligent Computer Science Forum required a lot of testing, but the moderation system is finally working seamlessly with the React frontend.</p>
+                </article>
+
+                <article class="project-card">
+                    <p class="tag">February 10, 2026 • Hardware & IoT</p>
+                    <h3>Prototyping the Smart IoT Medical Tray</h3>
+                    <p>Hardware debugging is always a test of patience! Getting the NodeMCU ESP8266 to communicate flawlessly with the Blynk platform for real-time compliance monitoring took some fine-tuning of the ultrasonic and RTC sensor inputs, but seeing the automated alerts trigger successfully made it all worth it.</p>
+                </article>
+
+                <article class="project-card">
+                    <p class="tag">March 05, 2026 • Artificial Intelligence</p>
+                    <h3>Cracking the 8-Puzzle with AI</h3>
+                    <p>Implementing search algorithms to solve the 8-puzzle in Python was a fantastic exercise in optimization. Visualizing how the algorithm navigates the state space to find the most efficient path really solidified my understanding of fundamental AI concepts.</p>
+                </article>
+
+                <article class="project-card">
+                    <p class="tag">April , 2025 • Mobile Dev</p>
+                    <h3>Diving into Cross-Platform with Flutter</h3>
+                    <p>Transitioning into mobile development with Flutter and Dart has been a great experience. The widget-based UI building approach is highly intuitive, allowing me to prototype and iterate on the app's design much faster than traditional native development.</p>
+                </article>
+
+                <article class="project-card">
+                    <p class="tag">March 15, 2026 • Digital Consulting</p>
+                    <h3>Digital Transformation for Local SMEs</h3>
+                    <p>Through the SULAM initiative, I had the opportunity to step into a digital consultant role for Kedai Roti Canai Abe Lee dan Kak Ma. It was incredibly rewarding to apply professional ethics to a real-world scenario, establishing their Google Maps presence and launching their TikTok account to boost local engagement.</p>
+                </article>
+
+            </div>
+        </section>
     </main>
 
+    <footer>
+        <p>© 2026 William Ong Xuan Wei. Built for CSD 34203.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>

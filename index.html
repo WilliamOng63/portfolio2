@@ -3,24 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Blog</title>
+    <title>William's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My Personal Blog</h1>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About</a> | 
-            <a href="blog.html">Blog</a> | 
+    <nav class="navbar">
+        <div class="nav-logo"> 
+            <img src="logo99.png" alt="William's Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--accent);">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
-        </nav>
+            <button id="theme-toggle">🌓</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm William.</h1>
+            <p>A Full-Stack Developer & Computer Science Student building things for the web and the physical world.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
     </header>
 
     <main>
-        <h2>Hi there!</h2>
-        <p>Welcome to my GitHub portfolio project. This is my space to share my thoughts, projects, and development journey.</p>
+        <section id="projects" class="portfolio-section">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <h3>Intelligent CS Forum (FYP)</h3>
+                    <p class="tag">Python • Machine Learning • NLP</p>
+                    <p>An AI-powered discussion platform featuring an automated spam detection microservice built with Python, utilizing Naive Bayes and TF-IDF algorithms alongside a React frontend.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>FacilEase</h3>
+                    <p class="tag">Workshop Project • Full-Stack</p>
+                    <p>A functional Facility Booking System designed to address workshop requirements using PHP (CodeIgniter 4), React, and MySQL.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Smart IoT Medical Tray</h3>
+                    <p class="tag">Hardware • IoT</p>
+                    <p>A real-time compliance monitoring healthcare solution utilizing NodeMCU ESP8266, various sensors, and the Blynk IoT platform.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>SME Digital Transformation</h3>
+                    <p class="tag">SULAM Initiative • Digital Consulting</p>
+                    <p>Executed a digital strategy, including Google Maps integration and social media management for Kedai Roti Canai Abe Lee dan Kak Ma.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Flutter Mobile App</h3>
+                    <p class="tag">Flutter • Dart • Mobile Dev</p>
+                    <p>A cross-platform mobile application built using the Flutter framework, focusing on delivering a smooth, responsive user interface and native-like performance.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>AI 8-Puzzle Solver</h3>
+                    <p class="tag">Python • Artificial Intelligence • Algorithms</p>
+                    <p>A Python-based implementation of AI search algorithms designed to efficiently solve the classic 8-puzzle game by exploring optimal pathfinding state spaces.</p>
+                </div>
+
+            </div>
+
+            
+        </section>
     </main>
 
+    <footer>
+        <p>© 2026 William Ong Xuan Wei.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        // 1. When the page loads, check if they previously chose dark mode
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+
+        // 2. When the button is clicked, toggle the theme AND save the preference
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            
+            // If the body now has 'dark-theme', save 'dark' to storage. Otherwise, save 'light'.
+            if (document.body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>
