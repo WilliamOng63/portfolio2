@@ -24,3 +24,8 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/WilliamOng63/portfolio.git](https://github.com/WilliamOng63/portfolio.git) 
+
+## Live Demo
+Check out the live website here: 
+ ```bash
+[View My E-Portfolio](https://williamong63.github.io/portfolio/) 
