@@ -9,7 +9,7 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 ## Features
 
 - **Modern UI/UX:** Clean, professional grid-based layout.
-- **Responsive Design:** Fully accessible and optimized for both desktop and mobile viewing.
+- **Responsive Design:** Fully accessible and optimized for both desktop and mobile viewing. 
 - **Dark/Light Mode:** Interactive JavaScript toggle allowing users to switch interface themes.
 - **Project Showcase:** Dedicated sections highlighting full-stack development, IoT hardware, and digital transformation projects.
 - **Multi-Page Structure:** Includes Home, About, Blog, and Contact pages.
@@ -37,5 +37,5 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 Check out the live website here:
 
 ```bash
-[View My E-Portfolio](https://williamong63.github.io/portfolio/)
+[View My E-Portfolio](https://williamong63.github.io/portfolio/) 
 ```
