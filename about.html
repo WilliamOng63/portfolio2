@@ -1,105 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - William's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-logo">
-            <img src="logo99.png" alt="William's Logo" class="logo-img">
-        </div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html" style="color: var(--accent);">About</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-            <button id="theme-toggle">🌓</button>
-        </div>
+      <div class="nav-logo">
+        <img src="logo99.png" alt="William's Logo" class="logo-img" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" style="color: var(--accent)">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle">🌓</button>
+      </div>
     </nav>
 
     <main>
-        <section class="portfolio-section">
-            <h2>About Me</h2>
-            <div style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 3rem;">
-                <p>Hello! I am William Ong Xuan Wei, a Computer Science student at Universiti Sultan Zainal Abidin (UniSZA).</p>
-                <br>
-                <p>I am passionate about solving real-world problems by bridging the gap between software engineering and physical hardware. Whether I am building full-stack web applications to streamline workflows or wiring up microcontrollers for real-time data tracking, I love the challenge of bringing an idea to life from the ground up.</p>
-                <br>
-                <p>When I am not coding or debugging circuits, you can usually find me analyzing the second-hand tech market or solving complex mid-game tactical puzzles in Chinese Chess (Xiangqi).</p>
-            </div>
-
-            <h2>Technical Skills</h2>
-            <div class="project-grid">
-                
-                <div class="project-card">
-                    <h3>Full-Stack Development</h3>
-                    <p class="tag">Web & Database</p>
-                    <p>Proficient in building robust systems using PHP with the CodeIgniter 4 framework, crafting interactive UIs with React and Tailwind CSS, and managing databases with MySQL.</p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Hardware & IoT</h3>
-                    <p class="tag">Embedded Systems</p>
-                    <p>Experienced in wiring and programming NodeMCU ESP8266 and Arduino boards, integrating various sensors (DHT11, ultrasonic, RTC), and connecting them to the Blynk IoT platform.</p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Digital Consulting</h3>
-                    <p class="tag">Marketing & Design</p>
-                    <p>Skilled in executing digital transformation strategies for local SMEs, including Google Maps integration, social media management, and graphic design using Canva.</p>
-                </div>
-
-                
-                <div class="project-card">
-                    <h3>AI & Machine Learning</h3>
-                    <p class="tag">Python & NLP</p>
-                    <p>Experienced in building intelligent systems, implementing Natural Language Processing models, and utilizing algorithms like Naive Bayes and TF-IDF for automated text classification.</p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Mobile App Development</h3>
-                    <p class="tag">Flutter & Dart</p>
-                    <p>Skilled in cross-platform mobile development using Flutter to create highly responsive, visually appealing applications for both Android and iOS environments.</p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Algorithm Design</h3>
-                    <p class="tag">Search & Optimization</p>
-                    <p>Proficient in designing and implementing complex AI search algorithms and data structures in Python to solve logic puzzles and pathfinding problems efficiently.</p>
-                </div>
-
-            </div>
-        </section>
+      <section class="portfolio-section">
+        <h2>About Me</h2>
+        <div style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 3rem">
+          <p>
+            Hello! I am William Ong Xuan Wei, a Computer Science student at
+            Universiti Sultan Zainal Abidin (UniSZA).
+          </p>
+          <br />
+          <p>
+            I am passionate about solving real-world problems by bridging the
+            gap between software engineering and physical hardware. Whether I am
+            building full-stack web applications to streamline workflows or
+            wiring up microcontrollers for real-time data tracking, I love the
+            challenge of bringing an idea to life from the ground up.
+          </p>
+          <br />
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>© 2026 William Ong Xuan Wei. Built for CSD 34203.</p>
+      <p>© 2026 William Ong Xuan Wei. Built for CSD 34203.</p>
     </footer>
 
     <script>
-        const toggleButton = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme');
+      const toggleButton = document.getElementById("theme-toggle");
+      const currentTheme = localStorage.getItem("theme");
 
-        // 1. When the page loads, check if they previously chose dark mode
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-theme');
+      // 1. When the page loads, check if they previously chose dark mode
+      if (currentTheme === "dark") {
+        document.body.classList.add("dark-theme");
+      }
+
+      // 2. When the button is clicked, toggle the theme AND save the preference
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+
+        // If the body now has 'dark-theme', save 'dark' to storage. Otherwise, save 'light'.
+        if (document.body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
         }
-
-        // 2. When the button is clicked, toggle the theme AND save the preference
-        toggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            
-            // If the body now has 'dark-theme', save 'dark' to storage. Otherwise, save 'light'.
-            if (document.body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
+      });
     </script>
-</body>
+  </body>
 </html>

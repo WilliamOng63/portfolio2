@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills - William's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="logo99.png" alt="William's Logo" class="logo-img" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" style="color: var(--accent)">Skills</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle">🌓</button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="portfolio-section">
+        <h2>Current Skills</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1rem">
+              ⚛️ Full-Stack & Mobile Development
+            </h3>
+            <p style="margin-bottom: 1.5rem; font-size: 0.95rem">
+              I build robust web and mobile applications from scratch. With
+              experience in PHP frameworks like Laravel and CodeIgniter, as well
+              as Java and Flutter, I focus on creating secure, efficient
+              application logic and seamless user interfaces. I also have little
+              experience doing the MatLab for the digital image processing
+              project.
+            </p>
+            <p style="font-size: 0.9rem"><strong>Tech stack:</strong></p>
+            <div class="tech-pill-container">
+              <span class="tech-pill">PHP</span>
+              <span class="tech-pill">CodeIgniter</span>
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">HTML</span>
+              <span class="tech-pill">CSS</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1rem">
+              🐧 Network Security & Systems
+            </h3>
+            <p style="margin-bottom: 1.5rem; font-size: 0.95rem">
+              Driven by an interest in securing network infrastructure and
+              application environments. I analyze network traffic, write
+              automation scripts to detect suspicious log activity, and
+              continually expand my understanding of threat detection and
+              incident response.
+            </p>
+            <p style="font-size: 0.9rem"><strong>Tech stack:</strong></p>
+            <div class="tech-pill-container">
+              <span class="tech-pill">Linux</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Wireshark</span>
+              <span class="tech-pill">Networking (TCP/IP, DNS)</span>
+              <span class="tech-pill">Log Analysis</span>
+              <span class="tech-pill">Firewalls</span>
+              <span class="tech-pill">Git</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <h3 style="font-size: 1.4rem; margin-bottom: 1rem">
+              🐍 IoT & Hardware Integration
+            </h3>
+            <p style="margin-bottom: 1.5rem; font-size: 0.95rem">
+              I bridge the gap between physical hardware and digital dashboards.
+              I have hands-on experience wiring and programming microcontrollers
+              to create real-time data monitoring, flood prediction, and
+              tracking systems.
+            </p>
+            <p style="font-size: 0.9rem"><strong>Tech stack:</strong></p>
+            <div class="tech-pill-container">
+              <span class="tech-pill">ESP32 / ESP8266</span>
+              <span class="tech-pill">IoT Sensors</span>
+              <span class="tech-pill">Real-time Monitoring</span>
+              <span class="tech-pill">Hardware Integration</span>
+              <span class="tech-pill">Data Dashboards</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 William Ong Xuan Wei. Built for CSD 34203.</p>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById("theme-toggle");
+      const currentTheme = localStorage.getItem("theme");
+
+      if (currentTheme === "dark") {
+        document.body.classList.add("dark-theme");
+      }
+
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
+  </body>
+</html>
