@@ -37,5 +37,5 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 Check out the live website here:
 
 ```bash
-[View My E-Portfolio](https://williamong63.github.io/portfolio/) 
+[View My E-Portfolio]([https://williamong63.github.io/portfolio/](https://williamong63.github.io/portfolio2/)) 
 ```
