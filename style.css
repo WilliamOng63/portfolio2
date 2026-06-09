@@ -181,3 +181,44 @@ footer {
   font-family: "Courier New", Courier, monospace;
   transition: all 0.3s ease;
 }
+
+/* =========================================
+   MOBILE RESPONSIVENESS (PHONES)
+   ========================================= */
+@media (max-width: 768px) {
+  /* Stack the Navigation Bar vertically */
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .nav-links {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; 
+  }
+
+  /*Reduce the huge desktop padding and gaps */
+  .hero, .portfolio-section {
+    padding: 3rem 1.5rem !important;
+    gap: 2rem !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem !important; 
+  }
+
+  /* Shrink the Profile Picture slightly for small screens */
+  .hero-image img {
+    width: 220px !important; 
+    height: 220px !important;
+  }
+
+  /* Make the Project / Skills grids stack into a single column */
+  .project-grid, .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+}
