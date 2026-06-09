@@ -27,13 +27,13 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 - Home Page
 <div align="center">
   <img 
-    src="ss1.png" 
+    src="ss8.png" 
     alt="Screenshot 1" 
     width="48%" 
     style="border-radius: 8px; border: 2px solid #555; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 10px;" 
   />
   <img 
-    src="ss2.png" 
+    src="ss9.png" 
     alt="Screenshot 2" 
     width="48%" 
     style="border-radius: 8px; border: 2px solid #555; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 10px;" 
