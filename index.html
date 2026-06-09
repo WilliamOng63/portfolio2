@@ -21,80 +21,26 @@
       </div>
     </nav>
 
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Hi, I'm William.</h1>
-        <p>
+    <header class="hero" style="display: flex; align-items: center; justify-content: center; gap: 4rem; flex-wrap: wrap; padding: 6rem 2rem; max-width: 1000px; margin: 0 auto;">
+      
+      <div class="hero-content" style="flex: 1; min-width: 300px; text-align: left;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Hi, I'm William.</h1>
+        <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 2rem;">
           A Full-Stack Developer & Computer Science Student building things for
           the web and the physical world.
         </p>
-        <a href="#projects" class="btn">View My Work</a>
+        <a href="about.html" class="btn">More About Me</a>
       </div>
+
+      <div class="hero-image" style="flex: 1; min-width: 300px; text-align: center;">
+        <img 
+          src="YOUR_PHOTO_NAME.jpg" 
+          alt="William Ong Xuan Wei" 
+          style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent, #555); box-shadow: 0 4px 15px rgba(0,0,0,0.2);" 
+        />
+      </div>
+
     </header>
-
-    <main>
-      <section id="projects" class="portfolio-section">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <h3>Intelligent CS Forum (FYP)</h3>
-            <p class="tag">Python • Machine Learning • NLP</p>
-            <p>
-              An AI-powered discussion platform featuring an automated spam
-              detection microservice built with Python, utilizing Naive Bayes
-              and TF-IDF algorithms alongside a React frontend.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <h3>FacilEase</h3>
-            <p class="tag">Workshop Project • Full-Stack</p>
-            <p>
-              A functional Facility Booking System designed to address workshop
-              requirements using PHP (CodeIgniter 4), React, and MySQL.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <h3>Smart IoT Medical Tray</h3>
-            <p class="tag">Hardware • IoT</p>
-            <p>
-              A real-time compliance monitoring healthcare solution utilizing
-              NodeMCU ESP8266, various sensors, and the Blynk IoT platform.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <h3>SME Digital Transformation</h3>
-            <p class="tag">SULAM Initiative • Digital Consulting</p>
-            <p>
-              Executed a digital strategy, including Google Maps integration and
-              social media management for Kedai Roti Canai Abe Lee dan Kak Ma.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <h3>Flutter Mobile App</h3>
-            <p class="tag">Flutter • Dart • Mobile Dev</p>
-            <p>
-              A cross-platform mobile application built using the Flutter
-              framework, focusing on delivering a smooth, responsive user
-              interface and native-like performance.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <h3>AI 8-Puzzle Solver</h3>
-            <p class="tag">Python • Artificial Intelligence • Algorithms</p>
-            <p>
-              A Python-based implementation of AI search algorithms designed to
-              efficiently solve the classic 8-puzzle game by exploring optimal
-              pathfinding state spaces.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
 
     <footer>
       <p>© 2026 William Ong Xuan Wei.</p>
