@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FYP Case Study - William's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      
+      .article-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+      .article-hero-img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 2rem 0;
+      }
+      .article-body p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      .article-body h3 {
+        margin: 2rem 0 1rem;
+        font-size: 1.5rem;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: var(--accent, #007bff);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="logo99.png" alt="William's Logo" class="logo-img" />
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="blog.html" style="color: var(--accent)">Blog</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle">🌓</button>
+      </div>
+    </nav>
+
+    <main class="article-container">
+      <a href="blog.html" class="back-link">← Back to all posts</a>
+      
+      <span class="blog-tag">Machine Learning & NLP</span>
+      <h1 style="font-size: 2.5rem; margin: 1rem 0;">Training the NLP Spam Detector for My FYP</h1>
+      <p class="blog-date">Published on May 20, 2026 • 5 min read</p>
+
+      <img src="fyp.jpg" alt="Intelligent CS Forum" class="article-hero-img">
+
+      <div class="article-body">
+        <p>
+          Building the Intelligent Computer Science Forum for my Final Year Project presented a unique challenge: how do we keep a technical discussion board clean of spam without relying on constant manual moderation? The answer was building an automated spam detection microservice.
+        </p>
+
+        <h3>The Tech Stack</h3>
+        <p>
+          I decided to separate the concerns of the application. The frontend was built with React to ensure a snappy, modern user interface, while the heavy lifting of the text analysis was offloaded to a dedicated Python microservice.
+        </p>
+
+        <h3>Implementing the NLP Model</h3>
+        <p>
+          To flag spam accurately, I utilized Natural Language Processing (NLP). I trained a model using the Naive Bayes algorithm alongside TF-IDF (Term Frequency-Inverse Document Frequency) vectorization. TF-IDF was crucial here, as it helped the algorithm understand which words were actually important in a computer science context, rather than just frequently used filler words.
+        </p>
+
+        <h3>The Results</h3>
+        <p>
+          Tuning the algorithms required extensive testing to minimize false positives—nobody wants legitimate code snippets flagged as spam! Once calibrated, the moderation system integrated seamlessly with the React frontend via REST APIs. When a user submits a post, the Python backend evaluates it in milliseconds, keeping the forum clean and the user experience uninterrupted.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 William Ong Xuan Wei. Built for CSD 34203.</p>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById("theme-toggle");
+      const currentTheme = localStorage.getItem("theme");
+
+      if (currentTheme === "dark") {
+        document.body.classList.add("dark-theme");
+      }
+
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
+  </body>
+</html>
