@@ -24,7 +24,7 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 ## Screenshots
 
 ## Screenshots
-- **Home Page
+- Home Page
 <div align="center">
   <img 
     src="ss1.png" 
@@ -39,7 +39,7 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
     style="border-radius: 8px; border: 2px solid #555; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 10px;" 
   />
 </div>
-- **About Page
+- About Page
 <div align="center">
   <img 
     src="ss3.png" 
@@ -48,7 +48,7 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
     style="border-radius: 8px; border: 2px solid #555; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" 
   />
 </div>
-- **Skill Page
+- Skill Page
 <div align="center">
   <img 
     src="ss4.png" 
@@ -57,7 +57,7 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
     style="border-radius: 8px; border: 2px solid #555; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" 
   />
 </div>
-- **Blog Page
+- Blog Page
 <div align="center">
   <img 
     src="ss5.png" 
@@ -66,7 +66,7 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
     style="border-radius: 8px; border: 2px solid #555; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" 
   />
 </div>
-- **Contact Page
+- Contact Page
 <div align="center">
   <img 
     src="ss6.png" 
