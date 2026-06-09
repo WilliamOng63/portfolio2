@@ -23,7 +23,6 @@ A modern, responsive personal e-portfolio website designed to showcase my softwa
 
 ## Screenshots
 
-## Screenshots
 - **Home Page**
 <div align="center">
   <img 
